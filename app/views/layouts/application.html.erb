@@ -10,7 +10,9 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <%= render 'layouts/searchform' %>
+    <% if logged_in? %>
+      <%= render 'layouts/searchform' %>
+    <% end %>
       <main>
         <p id="notice"><%= notice %></p>
         <%= yield %>
